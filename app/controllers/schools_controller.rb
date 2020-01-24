@@ -1,9 +1,9 @@
-class SchoolsContorller < ApplicationController
+class SchoolsController < ApplicationController
   # TODO: add this back in later when things are working again
-  #before_action :load_school, only: %i(show edit update destroy)
+  before_action :load_school, only: %i(show edit update destroy)
 
   def index
-    @schools = School.first
+    @schools = School.all
   end
 
   def show
