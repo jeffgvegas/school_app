@@ -4,7 +4,7 @@
 <ul>
   <% @school.students.each do |student| %>
     <li>
-      <%= @school.name %>
+      <%= Student.all %>
       - <%= link_to("edit", edit_school_path(@school, student)) %>
         <%= link_to("delete", school_path(@school, student), method: :delete, data: {confirm: "Delete?"}) %>
     </li>
